@@ -90,8 +90,11 @@ export function Visualization({ visualizationTrigger }: VisualizationProps) {
       if (nextState !== undefined) {
         setComparingCells(
           comparingCells.map((cell) => [
+            // @ts-ignore
             cell.currentIndex,
+            // @ts-ignore
             cell.turn,
+            // @ts-ignore
             turnsBeforeSwap - cell.picksRemaining,
           ])
         );

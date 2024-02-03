@@ -124,20 +124,24 @@ export function useDP(
 
       if (turn == 0) {
         if (takeScore[0] > giveScore[0]) {
+          // @ts-ignore
           dp[currentIndex][turn][picksRemaining] = takeScore;
           decision = "take";
           nextState = takeState;
         } else {
+          // @ts-ignore
           dp[currentIndex][turn][picksRemaining] = giveScore;
           decision = "give";
           nextState = giveState;
         }
       } else {
         if (takeScore[1] > giveScore[1]) {
+          // @ts-ignore
           dp[currentIndex][turn][picksRemaining] = takeScore;
           decision = "take";
           nextState = takeState;
         } else {
+          // @ts-ignore
           dp[currentIndex][turn][picksRemaining] = giveScore;
           decision = "give";
           nextState = giveState;
